@@ -78,7 +78,7 @@ body {
 
 @keyframes hueRotate {
   to {
-    filter: hue-rotate(360deg);
+    filter: hue-rotate(-360deg);
   }
 }
 
@@ -96,5 +96,34 @@ body {
 
 .animate-aurora {
   background-size: 200% 200%;
-  animation: hueRotate 3s 0s linear infinite, aurora 3s ease infinite;
+  animation: hueRotate 7s 0s linear infinite, aurora 3s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animate-shine {
+  animation: shine var(--duration) linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
